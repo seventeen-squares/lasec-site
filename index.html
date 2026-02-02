@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LASEC - Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ca0 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 255, 255, 0.03) 2px,
+                    rgba(255, 255, 255, 0.03) 4px
+                );
+            pointer-events: none;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: 8px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to right, #ffffff, #c0c0c0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .coming-soon {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 50px;
+            color: #f0f0f0;
+        }
+
+        .contact-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .contact-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+        }
+
+        .contact-item svg {
+            width: 24px;
+            height: 24px;
+            fill: #4a9eff;
+        }
+
+        .contact-item a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            border-bottom-color: #4a9eff;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+                letter-spacing: 4px;
+            }
+
+            .coming-soon {
+                font-size: 1.8rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .description {
+                font-size: 1rem;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+        }
+
+        .steel-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <svg class="steel-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="steelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#c0c0c0;stop-opacity:1" />
+                    <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#8a8a8a;stop-opacity:1" />
+                </linearGradient>
+            </defs>
+            <path d="M 20 30 L 50 10 L 80 30 L 80 70 L 50 90 L 20 70 Z" fill="url(#steelGradient)" stroke="#ffffff" stroke-width="2"/>
+            <path d="M 50 10 L 50 90 M 20 30 L 80 70 M 80 30 L 20 70" stroke="#1e3c72" stroke-width="1.5"/>
+        </svg>
+
+        <div class="logo">LASEC</div>
+        <div class="subtitle">Steel Manufacturing Excellence</div>
+        
+        <div class="coming-soon">Coming Soon</div>
+        
+        <div class="description">
+            We're building something strong and reliable, just like our steel products.<br>
+            Our new website is under construction and will be launching soon.
+        </div>
+
+        <div class="contact-section">
+            <div class="contact-title">Get in Touch</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                    <a href="mailto:lasec@lasecmw.com">lasec@lasecmw.com</a>
+                </div>
+                <div class="contact-item">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                    <a href="tel:0991710391">0991 710 391</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
