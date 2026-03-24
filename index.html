@@ -3,213 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LASEC - Coming Soon</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ca0 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            position: relative;
-            overflow: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                repeating-linear-gradient(
-                    90deg,
-                    transparent,
-                    transparent 2px,
-                    rgba(255, 255, 255, 0.03) 2px,
-                    rgba(255, 255, 255, 0.03) 4px
-                );
-            pointer-events: none;
-        }
-
-        .container {
-            text-align: center;
-            padding: 40px;
-            max-width: 800px;
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            position: relative;
-            z-index: 1;
-        }
-
-        .logo {
-            font-size: 4rem;
-            font-weight: 700;
-            letter-spacing: 8px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            background: linear-gradient(to right, #ffffff, #c0c0c0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: #e0e0e0;
-            margin-bottom: 40px;
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-
-        .coming-soon {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        .description {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 50px;
-            color: #f0f0f0;
-        }
-
-        .contact-section {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 15px;
-            margin-top: 40px;
-        }
-
-        .contact-title {
-            font-size: 1.5rem;
-            margin-bottom: 25px;
-            font-weight: 500;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-size: 1.1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateX(5px);
-        }
-
-        .contact-item svg {
-            width: 24px;
-            height: 24px;
-            fill: #4a9eff;
-        }
-
-        .contact-item a {
-            color: #fff;
-            text-decoration: none;
-            border-bottom: 2px solid transparent;
-            transition: border-color 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            border-bottom-color: #4a9eff;
-        }
-
-        @media (max-width: 768px) {
-            .logo {
-                font-size: 2.5rem;
-                letter-spacing: 4px;
-            }
-
-            .coming-soon {
-                font-size: 1.8rem;
-            }
-
-            .subtitle {
-                font-size: 1rem;
-            }
-
-            .description {
-                font-size: 1rem;
-            }
-
-            .container {
-                padding: 30px 20px;
-            }
-        }
-
-        .steel-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 30px;
-            opacity: 0.8;
-        }
-    </style>
+    <title>LASEC - Steel Manufacturing & Construction</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <svg class="steel-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="steelGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:#c0c0c0;stop-opacity:1" />
-                    <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:#8a8a8a;stop-opacity:1" />
-                </linearGradient>
-            </defs>
-            <path d="M 20 30 L 50 10 L 80 30 L 80 70 L 50 90 L 20 70 Z" fill="url(#steelGradient)" stroke="#ffffff" stroke-width="2"/>
-            <path d="M 50 10 L 50 90 M 20 30 L 80 70 M 80 30 L 20 70" stroke="#1e3c72" stroke-width="1.5"/>
-        </svg>
 
-        <div class="logo">LASEC</div>
-        <div class="subtitle">Steel Manufacturing Excellence</div>
-        
-        <div class="coming-soon">Coming Soon</div>
-        
-        <div class="description">
-            We're building something strong and reliable, just like our steel products.<br>
-            Our new website is under construction and will be launching soon.
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <a href="#">LASEC</a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="btn">Get a Quote</a></li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
+    </header>
 
-        <div class="contact-section">
-            <div class="contact-title">Get in Touch</div>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
-                    <a href="mailto:lasec@lasecmw.com">lasec@lasecmw.com</a>
-                </div>
-                <div class="contact-item">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                    </svg>
-                    <a href="tel:0991710391">0991 710 391</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Building the Future with Precision & Strength</h1>
+                <p>We specialize in heavy steel manufacturing, high-quality blocks & bricks, custom woodworking, and full-scale construction projects.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn">Our Services</a>
+                    <a href="#contact" class="btn btn-outline">Contact Us</a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <span>Who We Are</span>
+                <h2>Industry Leaders in Construction & Manufacturing</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="LASEC.jpeg" alt="Industrial construction">
+                </div>
+                <div class="about-text">
+                    <h3>We Deliver Excellence in Every Project</h3>
+                    <p>At LASEC, we combine decades of expertise with cutting-edge technology to deliver superior industrial solutions. From the foundation to the finishing touches, our integrated approach ensures quality across steel, stone, and wood.</p>
+                    <br>
+                    <ul class="check-list">
+                        <li>Premium Quality Materials & Manufacturing</li>
+                        <li>Certified & Experienced Engineering Team</li>
+                        <li>Timely Project Completion</li>
+                        <li>Safety First Approach</li>
+                    </ul>
+                    <br>
+                    <a href="#contact" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding services">
+        <div class="container">
+            <div class="section-title">
+                <span>What We Do</span>
+                <h2>Our Core Services</h2>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1: Steel -->
+                <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h3>Steel Manufacturing</h3>
+                    <p>Custom fabrication, structural steel, and industrial metalworking solutions for large-scale infrastructure.</p>
+                    <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Service 2: Blocks & Bricks -->
+                <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-cubes-stacked"></i>
+                    </div>
+                    <h3>Blocks & Bricks</h3>
+                    <p>High-density concrete blocks and premium bricks for residential and commercial foundations.</p>
+                    <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Service 3: Woodworking -->
+                <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-tree"></i>
+                    </div>
+                    <h3>Woodworking</h3>
+                    <p>Custom joinery, furniture, and structural timber work crafted by skilled artisans.</p>
+                    <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+                <!-- Service 4: Construction -->
+                <div class="service-card">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-helmet-safety"></i>
+                    </div>
+                    <h3>General Construction</h3>
+                    <p>End-to-end construction services managing your project from site preparation to final handover.</p>
+                    <a href="#" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3 class="counter" data-target="25">0</h3>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="350">0</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="120">0</h3>
+                    <p>Expert Workers</p>
+                </div>
+                <div class="stat-item">
+                    <h3 class="counter" data-target="15">0</h3>
+                    <p>Global Awards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / Portfolio Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <span>Our Portfolio</span>
+                <h2>Recent Projects</h2>
+            </div>
+            
+            <div class="project-grid">
+                <div class="project-item">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Steel Structure">
+                    <div class="project-overlay">
+                        <h3>Industrial Steel Plant</h3>
+                        <p>Fabrication & Assembly</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Building Construction">
+                    <div class="project-overlay">
+                        <h3>Skyline Tower</h3>
+                        <p>General Construction</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Steel Structure">
+                    <div class="project-overlay">
+                        <h3>Custom Timber Framework</h3>
+                        <p>Woodworking</p>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn btn-outline" style="color: var(--primary-color); border-color: var(--primary-color);">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding" style="background-color: var(--light-bg);">
+        <div class="container">
+            <div class="section-title">
+                <span>Get In Touch</span>
+                <h2>Contact Us</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info-box">
+                    <h3>Contact Info</h3>
+                    <br>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h4>Our Headquarters</h4>
+                            <p>4.5km past MRA Customs on Mchinji Road Behind Njewa Primary School, Lilongwe, Malawi</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h4>Phone Number</h4>
+                            <p>+265 991 710 391</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <h4>Email Address</h4>
+                            <p>lasec@lasecmw.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <input type="text" id="contactName" placeholder="Your Name" required>
+                        <input type="email" id="contactEmail" placeholder="Your Email" required>
+                        <select id="contactService">
+                            <option value="">Select Service</option>
+                            <option value="Steel Manufacturing">Steel Manufacturing</option>
+                            <option value="Blocks & Bricks">Blocks & Bricks</option>
+                            <option value="Woodworking">Woodworking</option>
+                            <option value="Construction">Construction</option>
+                        </select>
+                        <textarea id="contactMessage" placeholder="Message" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-widget">
+                    <div class="logo">
+                        <a href="#" style="color:white;">LASEC</a>
+                    </div>
+                    <br>
+                    <p>LASEC is your trusted partner for premium heavy industrial manufacturing and construction services. We build the future with strength and precision.</p>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Steel Manufacturing</a></li>
+                        <li><a href="#">Blocks & Bricks</a></li>
+                        <li><a href="#">Woodworking</a></li>
+                        <li><a href="#">Construction</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-widget">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest news and updates.</p>
+                    <br>
+                    <form style="display: flex;">
+                        <input type="email" placeholder="Email" style="padding: 10px; border:none; width: 70%;">
+                        <button type="submit" style="width: 30%; background: var(--primary-color); color: white; border: none; cursor: pointer;"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 LASEC. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
 </body>
 </html>
