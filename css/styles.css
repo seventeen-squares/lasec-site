@@ -128,6 +128,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    position: relative;
 }
 
 .logo a {
@@ -135,11 +136,23 @@ header {
     font-weight: 700;
     color: var(--primary-color);
     font-family: 'Oswald', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 52px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-links {
     display: flex;
     gap: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-links a {
@@ -149,6 +162,13 @@ header {
 
 .nav-links a:hover, .nav-links a.active {
     color: var(--primary-color);
+}
+
+.nav-cta {
+    padding: 10px 22px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .hamburger {
