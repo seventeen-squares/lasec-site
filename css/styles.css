@@ -185,6 +185,18 @@ header {
     transition: var(--transition);
 }
 
+.hamburger.toggle .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-9px, 8px);
+}
+
+.hamburger.toggle .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.toggle .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -519,12 +531,25 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        transition: 0.5s;
+        transition: right 0.5s ease;
         box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        gap: 30px;
+        z-index: 999;
+        left: auto !important;
+        transform: none !important;
     }
     
     .nav-links.active {
         right: 0;
+    }
+    
+    .nav-links li a {
+        font-size: 1.5rem;
+        padding: 10px 0;
+    }
+    
+    .nav-cta {
+        display: none;
     }
     
     .hero-content h1 {

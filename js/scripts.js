@@ -1,11 +1,49 @@
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
+const navCta = document.querySelector('.nav-cta');
+
+// Close menu function
+function closeMenu() {
+    navLinks.classList.remove('active');
+    hamburger.classList.remove('toggle');
+    document.body.style.overflow = 'auto';
+}
+
+// Open menu function
+function openMenu() {
+    navLinks.classList.add('active');
+    hamburger.classList.add('toggle');
+    document.body.style.overflow = 'hidden';
+}
 
 if (hamburger) {
     hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('toggle');
+        if (navLinks.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+}
+
+// Close menu when clicking outside (only on mobile)
+document.addEventListener('click', (e) => {
+    // Check if we're on mobile
+    if (window.innerWidth <= 768 && navLinks.classList.contains('active')) {
+        // If click is not on hamburger, nav-links, or nav-cta, close menu
+        if (!e.target.closest('.hamburger') && !e.target.closest('.nav-links') && !e.target.closest('.nav-cta')) {
+            closeMenu();
+        }
+    }
+});
+
+// Close menu when nav-cta is clicked (on mobile)
+if (navCta) {
+    navCta.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            closeMenu();
+        }
     });
 }
 
@@ -16,8 +54,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         
         // Close mobile menu if open
         if (navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('toggle');
+            closeMenu();
         }
 
         const target = document.querySelector(this.getAttribute('href'));
